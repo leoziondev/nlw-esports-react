@@ -25,9 +25,14 @@ Inicializar Tailwindcss
 ```
 npx tailwindcss init -p
 ```
+Phosphor React Icons
+```
+npm i phosphor-react
+```
 
 ### Documentações
 - [ViteJS](https://vitejs.dev/guide/)
 - [ReactJS](https://pt-br.reactjs.org/docs/getting-started.html)
 - [Typescript](https://www.typescriptlang.org/pt/docs/)
 - [Tailwindcss](https://tailwindcss.com/docs/installation)
+- [Phosphor Icons](https://phosphoricons.com/)
