@@ -52,6 +52,10 @@ Radix UI Checkbox
 ```
 npm install @radix-ui/react-checkbox
 ```
+Radix UI Select
+```
+npm install @radix-ui/react-select
+```
 
 ### Documentações
 - [ViteJS](https://vitejs.dev/guide/)
