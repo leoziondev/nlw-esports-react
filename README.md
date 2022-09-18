@@ -48,6 +48,10 @@ Radix UI Modal
 ```
 npm install @radix-ui/react-dialog
 ```
+Radix UI Checkbox
+```
+npm install @radix-ui/react-checkbox
+```
 
 ### Documentações
 - [ViteJS](https://vitejs.dev/guide/)
