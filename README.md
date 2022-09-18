@@ -1,10 +1,15 @@
 # NLW eSports Mission Ignite - ReactJS
 __By Rocketseat__
 
+Projeto eSports desenvolvido durante a 9ª edição do NLW by **Rocketseat** utilizando uma das Stacks mais utilizadas no mercado atualmente (NODE, REACT, REACT NATIVE).
+
+Durante uma semana intensa, tivemos acesso a uma metodologia eficiente com foco no aprendizado, acesso a comunidade com milhares de devs e uma experiência completa como Dev FullStack.
+
+O projeto proposto codinome **Find your Duo**, é uma plataforma que ajuda gamers a encontrarem um parceiro ou parceira para jogar online seu game favorito, conectado a Twitch.
+
 ## Tecnologias
 
 - [NodeJS](https://github.com/leoziondev/nlw-esports-server)
-  - Typescript
   - Express
   - Typescript
   - Prisma
