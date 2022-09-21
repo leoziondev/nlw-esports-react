@@ -64,6 +64,10 @@ Axios
 ```
 npm install axios
 ```
+React Toastify
+```
+npm install react-toastify
+```
 
 ### Documentações
 - [ViteJS](https://vitejs.dev/guide/)
@@ -72,3 +76,5 @@ npm install axios
 - [Tailwindcss](https://tailwindcss.com/docs/installation)
 - [Radix UI](https://www.radix-ui.com/docs/primitives/overview/introduction)
 - [Phosphor Icons](https://phosphoricons.com/)
+- [Axios](https://axios-http.com/ptbr/docs/intro)
+- [React Toastify](https://fkhadra.github.io/react-toastify/introduction)
