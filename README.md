@@ -60,6 +60,10 @@ Radix UI Toggle Group
 ```
 npm install @radix-ui/react-toggle-group
 ```
+Axios
+```
+npm install axios
+```
 
 ### Documentações
 - [ViteJS](https://vitejs.dev/guide/)
