@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import * as Dialog from "@radix-ui/react-dialog";
 import * as Checkbox from "@radix-ui/react-checkbox";
 import * as Select from "@radix-ui/react-select";
+import * as ToggleGroup from "@radix-ui/react-toggle-group";
 
 import { Input } from "./Form/Input";
 
@@ -14,7 +15,9 @@ interface Game {
 
 export function CreateAdModal() {
   const [games, setGames] = useState<Game[]>([]);
-  const [currentGame, setCurrentGame] = useState('');
+  const [currentGame, setCurrentGame] = useState<string>('');
+  const [weekDays, setWeekDays] = useState<string[]>([]);
+
 
   useEffect(() => {
     fetch('http://localhost:3333/games')
@@ -91,16 +94,63 @@ export function CreateAdModal() {
                 </div>
               </div>
               <div className="flex flex-col">
-                <label htmlFor="weekDays" className="font-semibold mb-1">Quando costuma jogar?</label>
-                <div className="flex justify-between">
-                  <button title="Domingo" className="flex items-center justify-center p-3 bg-zinc-900 hover:bg-violet-600 rounded text-xs">Dom</button>
-                  <button title="Segunda" className="flex items-center justify-center p-3 bg-zinc-900 hover:bg-violet-600 rounded text-xs">Seg</button>
-                  <button title="Terça" className="flex items-center justify-center p-3 bg-zinc-900 hover:bg-violet-600 rounded text-xs">Ter</button>
-                  <button title="Quarta" className="flex items-center justify-center p-3 bg-zinc-900 hover:bg-violet-600 rounded text-xs">Qua</button>
-                  <button title="Quinta" className="flex items-center justify-center p-3 bg-zinc-900 hover:bg-violet-600 rounded text-xs">Qui</button>
-                  <button title="Sexta" className="flex items-center justify-center p-3 bg-zinc-900 hover:bg-violet-600 rounded text-xs">Sex</button>
-                  <button title="Sabado" className="flex items-center justify-center p-3 bg-zinc-900 hover:bg-violet-600 rounded text-xs">Sab</button>
-                </div>
+                <label htmlFor="weekDays" className="font-semibold mb-1">Quando costuma jogar?</label>                
+                <ToggleGroup.Root
+                  type="multiple"
+                  className="flex justify-between"
+                  value={weekDays}
+                  onValueChange={setWeekDays}
+                >
+                  <ToggleGroup.Item
+                    value="0"
+                    title="Domingo"
+                    className={`flex items-center justify-center p-3 hover:bg-violet-600 rounded text-xs ${weekDays.includes('0') ? 'bg-violet-500' : 'bg-zinc-900'}`}
+                  >
+                    Dom
+                  </ToggleGroup.Item>
+                  <ToggleGroup.Item
+                    value="1"
+                    title="Segunda"
+                    className={`flex items-center justify-center p-3 hover:bg-violet-600 rounded text-xs ${weekDays.includes('1') ? 'bg-violet-500' : 'bg-zinc-900'}`}
+                  >
+                    Seg
+                  </ToggleGroup.Item>
+                  <ToggleGroup.Item
+                    value="2"
+                    title="Terça"
+                    className={`flex items-center justify-center p-3 hover:bg-violet-600 rounded text-xs ${weekDays.includes('2') ? 'bg-violet-500' : 'bg-zinc-900'}`}
+                  >
+                    Ter
+                  </ToggleGroup.Item>
+                  <ToggleGroup.Item
+                    value="3"
+                    title="Quarta"
+                    className={`flex items-center justify-center p-3 hover:bg-violet-600 rounded text-xs ${weekDays.includes('3') ? 'bg-violet-500' : 'bg-zinc-900'}`}
+                  >
+                    Qua
+                  </ToggleGroup.Item>
+                  <ToggleGroup.Item
+                    value="4"
+                    title="Quinta"
+                    className={`flex items-center justify-center p-3 hover:bg-violet-600 rounded text-xs ${weekDays.includes('4') ? 'bg-violet-500' : 'bg-zinc-900'}`}
+                  >
+                    Qui
+                  </ToggleGroup.Item>
+                  <ToggleGroup.Item
+                    value="5"
+                    title="Sexta"
+                    className={`flex items-center justify-center p-3 hover:bg-violet-600 rounded text-xs ${weekDays.includes('5') ? 'bg-violet-500' : 'bg-zinc-900'}`}
+                  >
+                    Sex
+                  </ToggleGroup.Item>
+                  <ToggleGroup.Item
+                    value="6"
+                    title="Sabado"
+                    className={`flex items-center justify-center p-3 hover:bg-violet-600 rounded text-xs ${weekDays.includes('6') ? 'bg-violet-500' : 'bg-zinc-900'}`}
+                  >
+                    Sab
+                  </ToggleGroup.Item>
+                </ToggleGroup.Root>
               </div>
               <div className="flex flex-col">
                   <label htmlFor="discord" className="font-semibold mb-1">Qual o horário do dia?</label>
@@ -109,14 +159,14 @@ export function CreateAdModal() {
                     <Input type="time" placeholder="Até" />
                   </div>
                 </div>
-              <div className="flex items-center gap-2 text-sm">
+              <label className="flex items-center gap-2 text-sm">
                 <Checkbox.Root className="w-6 h-6 bg-zinc-900 rounded p-1">
                   <Checkbox.Indicator>
                     <Check className="w-4 h-4 text-emerald-400" />
                   </Checkbox.Indicator>
                 </Checkbox.Root>
                 Costumo me conectar ao chat de voz
-              </div>
+              </label>
 
               <footer className="flex justify-end gap-6">
                 <Dialog.Close className="bg-zinc-500 hover:bg-zinc-600 h-12 rounded-md font-semibold px-5">Cancelar</Dialog.Close>
