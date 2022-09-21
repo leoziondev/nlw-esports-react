@@ -56,6 +56,10 @@ Radix UI Select
 ```
 npm install @radix-ui/react-select
 ```
+Radix UI Toggle Group
+```
+npm install @radix-ui/react-toggle-group
+```
 
 ### Documentações
 - [ViteJS](https://vitejs.dev/guide/)
