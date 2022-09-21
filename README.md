@@ -68,6 +68,10 @@ React Toastify
 ```
 npm install react-toastify
 ```
+Swiper Slider
+```
+npm install swiper
+```
 
 ### Documentações
 - [ViteJS](https://vitejs.dev/guide/)
@@ -78,3 +82,4 @@ npm install react-toastify
 - [Phosphor Icons](https://phosphoricons.com/)
 - [Axios](https://axios-http.com/ptbr/docs/intro)
 - [React Toastify](https://fkhadra.github.io/react-toastify/introduction)
+- [Swiper Slider](https://swiperjs.com/react)
