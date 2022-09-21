@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
-import * as Dialog from '@radix-ui/react-dialog';
 
 import { GameCard } from './components/GameCard';
-import { AdBanner } from './components/AdBanner';
 
 import logo from './assets/logo-esports.svg';
 
@@ -46,11 +44,7 @@ function App() {
         })}        
       </div>
 
-      <Dialog.Root>
-        <AdBanner />
-
-        <CreateAdModal />
-      </Dialog.Root>
+      <CreateAdModal />
     </div>
   )
 }
