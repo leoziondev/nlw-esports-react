@@ -26,7 +26,7 @@ function App() {
     axios('http://localhost:3333/games').then(response => {
         setGames(response.data)
     });
-  }, []);
+  }, [games]);
 
   return (
     <div className="max-w-[1344px] mx-auto flex flex-col items-center my-20">
