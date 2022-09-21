@@ -4,13 +4,12 @@ import * as Dialog from "@radix-ui/react-dialog";
 import * as Checkbox from "@radix-ui/react-checkbox";
 import * as Select from "@radix-ui/react-select";
 import * as ToggleGroup from "@radix-ui/react-toggle-group";
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 import { Input } from "./Form/Input";
 import { AdBanner } from './AdBanner';
 
 import { CaretDown, CaretUp, Check, GameController } from "phosphor-react";
-import 'react-toastify/dist/ReactToastify.css';
 
 interface Game {
   id: string;
@@ -239,7 +238,6 @@ export function CreateAdModal() {
           </form>
         </Dialog.Content>
       </Dialog.Portal>
-      <ToastContainer />
     </Dialog.Root>
   )
 }

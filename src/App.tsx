@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { ToastContainer } from 'react-toastify';
 
 import { GameCard } from './components/GameCard';
+import { CreateAdModal } from './components/CreateAdModal';
 
 import logo from './assets/logo-esports.svg';
 
 import './styles/main.css';
-import { CreateAdModal } from './components/CreateAdModal';
-import axios from 'axios';
+import 'react-toastify/dist/ReactToastify.css';
 
 interface Game {
   id: string;
@@ -45,6 +47,7 @@ function App() {
       </div>
 
       <CreateAdModal />
+      <ToastContainer />
     </div>
   )
 }
